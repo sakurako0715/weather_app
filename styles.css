@@ -1,0 +1,164 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: ivory;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #81d4fa;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #81d4fa;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color:#81d4fa;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid #81d4fa;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li strong {
+    font-size: 18px;
+    color: #333;
+}
+
+ul li p {
+    margin: 5px 0;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #81d4fa; 
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #81d4fa; 
+    transform: scale(1.05); /* ボタンを少し大きく */
+}
+
+.button:active {
+    background-color: #41a0b8; /* クリック時の色 */
+    transform: scale(1); /* クリックでボタンが戻る */
+}
+
+.button.alert-button {
+    background-color: #f44336; /* 赤色のボタン */
+}
+
+.button.alert-button:hover {
+    background-color: #d32f2f;
+}
+
+.button.alert-button:active {
+    background-color: #c62828;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+.hourly-forecast {
+    width: 100%; /* 親要素の幅を指定 */
+    max-width: 400px; /* 最大幅を指定（画面全体を超えないようにする） */
+    margin: 0 auto; /* 中央揃え */
+    height: auto;
+}
+
+.hourly-chart {
+    width: 100%; /* Canvas自体の幅を親要素に合わせる */
+    height: 200px; /* 高さを指定 */
+}
+
+@media (max-width: 600px) {
+    form input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    form button {
+        width: 100%;
+    }
+    .links a {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
